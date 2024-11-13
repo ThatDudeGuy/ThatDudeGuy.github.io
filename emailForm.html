@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./styleEmail.css">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init({
+                    publicKey: "j8EQVBdkKOKq-jEET",
+                });
+            })();
+        </script>
+        <script src="./logic.js"></script>
+    </head>
+
+    <body>
+        <form>
+            <div class="formInfo">
+                <label class="labels" for="name">Name:</label><br>
+                <input class="inputs" type="text" id="name" name="name" required>
+            </div>
+
+            <div class="formInfo">
+                <label class="labels" for="email">Email:</label><br>
+                <input class="inputs" type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="formInfo">
+                <label class="labels" for="subject">Subject:</label><br>
+                <input class="inputs" type="text" id="subject" name="subject" required>
+            </div>
+
+            <div class="formInfo">
+                <label class="labels" for="message">Message:</label><br>
+                <textarea class="inputs" name="message" id="message" rows="6" required></textarea>
+            </div>
+            
+            <button id="closeButton" type="button" onclick="CloseEmailForm()">Close</button><br>
+            <button id="submitButton" type="submit" onclick="SendEmail()">Send</button>
+
+            <br><br><br><br>
+            <div>
+                <p>When you hit Send, your message will be sent to the following address:</p>
+                <p id="myEmail"><strong>wilfredovazquez001@gmail.com</strong></p>
+            </div>
+            
+        </form>
+    </body>
+</html>
