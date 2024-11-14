@@ -1,4 +1,5 @@
 body{
+    text-align: center;
     margin: 0;
 }
 
@@ -11,9 +12,9 @@ body{
     animation-fill-mode: forwards;
 }
 
-#indicator:hover {
+/* #indicator:hover {
     cursor: pointer;
-}
+} */
 
 @keyframes shiftUp {
     from {bottom: 0;}
@@ -35,15 +36,33 @@ body{
     to {transform: scaleY(0);}
 }
 
-#bannerButton {
-    all: unset;
+@keyframes spin {
+    from {rotate: 0;}
+    to {rotate: 180;}
+}
+
+#bannerButton:hover {
+    cursor: pointer;
+    /* all: unset;
     width: 100%;
-    background-color: yellow;
+    background-color: yellow; */
 }
 /* #indicator:active {
     animation-name: shiftUp;
     animation-duration: 1s;
 } */
+
+#mainScreen {
+    text-align: center;
+    margin: auto;
+    background-color: blue;
+    border-color: black;
+    background-size: auto;
+    width: 960px;
+    height: 600px;
+
+    /* background-image: url(../Images/monitor.png); */
+}
 
 #mainContainer {
     /* display: none; */
@@ -61,13 +80,34 @@ body{
     background-color: green;
     float: left;
     text-align: center;
-    padding-top: 250px;
-    padding-bottom: 250px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     width: 33.33%;
 }
 
 .game {
+    text-align: center;
     background-color: blue;
     margin: auto;
-    width: 50%;
+    /* width: 50%; */
+}
+
+.gameImage {
+    cursor: pointer;
+}
+
+#gameButtonContainer {
+    position: absolute;
+    /* background-color: pink; */
+    left: 8%;
+}
+
+.gameButton {
+    border-radius: 8px;
+}
+
+.arrow {
+    padding-left: 10px;
+    padding-right: 10px;
+    animation-fill-mode: forwards;
 }

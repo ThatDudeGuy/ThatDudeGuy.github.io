@@ -17,50 +17,69 @@
             </p>
         </header>
 
-        <div id="mainScreen">
+        <div id="gameButtonContainer">
+            <button id="closeGame" class="gameButton" onclick="CloseGame()">
+                Close Game
+            </button>
+            <br><br>
+            <button id="newGame" class="gameButton" onclick="NewGame()">
+                Select New Game
+            </button>
+        </div>
 
+        <div id="mainScreen">
+            <p>Select a game below and play it here!</p>
         </div>
 
         <div id="indicator">
-            <h1>Choose a game</h1>
+            <img class="arrow" src="../Images/arrow.png" alt="">
+            <button id="bannerButton" type="button"><h1>Choose a game</h1></button>
+            <img class="arrow" src="../Images/arrow.png" alt="">
 
             <div id="mainContainer">
                 <div class="row">
                     <div class="section">
                         <div id="first" class="game">
-                            <p>hi</p>
+                            <img class="gameImage" src="../Images/GameImages/game1.png" alt="" width="400" height="250">
+                            <p>Information</p>
+                            <!-- <p>hi</p> -->
                         </div>
                     </div>
     
                     <div class="section">
                         <div id="second" class="game">
-                            <p>bye</p>
+                            <img class="gameImage" src="../Images/GameImages/game2.png" alt="" width="300" height="250">
+                            <p>Information</p>
                         </div>
                     </div>
     
                     <div class="section">
                         <div id="third" class="game">
-                            <p>hello</p>
+                            <img class="gameImage" src="../Images/GameImages/game3.png" alt="" width="400" height="250">
+                            <p>Information</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="section">
-                        <div id="first" class="game">
-                            <p>hi</p>
+                        <div id="fourth" class="game">
+                            <img class="gameImage" src="../Images/GameImages/game4.png" alt="" width="400" height="250">
+                            <p>Information</p>
                         </div>
                     </div>
     
                     <div class="section">
-                        <div id="second" class="game">
-                            <p>bye</p>
+                        <div id="fifth" class="game">
+                            <img class="gameImage" src="../Images/GameImages/game5.png" alt="" width="400" height="250">
+                            <p>Information</p>
                         </div>
                     </div>
     
                     <div class="section">
-                        <div id="third" class="game">
-                            <p>hello</p>
+                        <div id="sixth" class="game">
+                            <img class="gameImage" src="../Images/GameImages/game6.png" alt="" width="400" height="250">
+                            <p>Information</p>
                         </div>
                     </div>
                 </div>
