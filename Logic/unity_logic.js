@@ -1,6 +1,13 @@
 let toggleAnim = false;
 let gamePlaying = false;
 
+// Elements
+let banner;
+let bannerButton;
+let mainContainer;
+let gameIcons;
+let mainScreen;
+
 const GAMES = [
     `<iframe src="https://i.simmer.io/@HairDude/al-game-jam" style="width:960px;height:600px"></iframe>`,
     `<iframe src="https://i.simmer.io/@HairDude/final-dig470" style="width:960px;height:600px"></iframe>`,
@@ -13,13 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 function SetListeners(){
-    let banner = document.getElementById('indicator');
-    let bannerButton = document.getElementById('bannerButton');
-    let mainContainer = document.getElementById("mainContainer");
-    let gameIcons = document.getElementsByClassName("gameImage");
-    let mainScreen = document.getElementById("mainScreen");
+    banner = document.getElementById('indicator');
+    bannerButton = document.getElementById('bannerButton');
+    mainContainer = document.getElementById("mainContainer");
+    mainScreen = document.getElementById("mainScreen");
+    gameIcons = document.getElementsByClassName("gameImage");
 
-    bannerButton.addEventListener('click', () => PlayAnim(banner, mainContainer));
+    bannerButton.addEventListener('click', () => PlayAnim());
 
     for (let i = 0; i < gameIcons.length; i++) {
         gameIcons[i].addEventListener("click", (event) => {
@@ -31,12 +38,13 @@ function SetListeners(){
     }
 }
 
-function PlayAnim(banner, mainContainer){
+function PlayAnim(){
     if(gamePlaying){ 
         banner.style.display = "none";
         return;   
     }
 
+    mainContainer.style.display = "block";
     toggleAnim = !toggleAnim;
 
     if(toggleAnim){
@@ -51,21 +59,17 @@ function PlayAnim(banner, mainContainer){
 
 function CloseGame(){
     if(!gamePlaying) return;
-    
-    let mainScreen = document.getElementById("mainScreen");
-    let banner = document.getElementById('indicator');
 
     toggleAnim = false;
     banner.style.display = "block";
     banner.style.animation = 'none';
+    mainContainer.style.display = "none";
     gamePlaying = false;
     mainScreen.innerHTML = `<p>Select a game below and play it here!</p>`;
 }
 
 function NewGame(){
     if(!gamePlaying) return;
-
-    let banner = document.getElementById('indicator');
     
     toggleAnim = true;
     banner.style.display = "block"
