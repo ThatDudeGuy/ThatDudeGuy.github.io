@@ -24,7 +24,6 @@ function SetListeners(){
     for (let i = 0; i < gameIcons.length; i++) {
         gameIcons[i].addEventListener("click", (event) => {
             var gameIndex = parseInt(event.target.src[event.target.src.length - 5])
-            console.log(gameIndex);
             mainScreen.innerHTML = GAMES[gameIndex - 1];
             banner.style.display = "none"
             gamePlaying = true;
@@ -54,7 +53,11 @@ function CloseGame(){
     if(!gamePlaying) return;
     
     let mainScreen = document.getElementById("mainScreen");
+    let banner = document.getElementById('indicator');
 
+    toggleAnim = false;
+    banner.style.display = "block";
+    banner.style.animation = 'none';
     gamePlaying = false;
     mainScreen.innerHTML = `<p>Select a game below and play it here!</p>`;
 }
