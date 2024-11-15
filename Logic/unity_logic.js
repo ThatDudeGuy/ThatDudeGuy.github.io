@@ -15,11 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
 function SetListeners(){
     let banner = document.getElementById('indicator');
     let bannerButton = document.getElementById('bannerButton');
-    let options = document.getElementById("mainContainer");
+    let mainContainer = document.getElementById("mainContainer");
     let gameIcons = document.getElementsByClassName("gameImage");
     let mainScreen = document.getElementById("mainScreen");
 
-    bannerButton.addEventListener('click', () => PlayAnim(banner, options));
+    bannerButton.addEventListener('click', () => PlayAnim(banner, mainContainer));
 
     for (let i = 0; i < gameIcons.length; i++) {
         gameIcons[i].addEventListener("click", (event) => {
@@ -32,7 +32,7 @@ function SetListeners(){
     }
 }
 
-function PlayAnim(banner, options){
+function PlayAnim(banner, mainContainer){
     if(gamePlaying){ 
         banner.style.display = "none";
         return;   
@@ -42,11 +42,11 @@ function PlayAnim(banner, options){
 
     if(toggleAnim){
         banner.style.animation = 'shiftUp 1s forwards';
-        options.style.animation = "expand 0.7s forwards";
+        mainContainer.style.animation = "expand 0.7s forwards";
     }
     else{
         banner.style.animation = 'shiftDown 0.35s forwards';
-        options.style.animation = "retract 0.6s forwards";
+        mainContainer.style.animation = "retract 0.6s forwards";
     }
 }
 

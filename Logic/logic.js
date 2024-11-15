@@ -1,5 +1,27 @@
 var params;
 
+document.addEventListener("DOMContentLoaded", () => SetListeners());
+
+function SetListeners(){
+    let github = document.getElementById("github");
+    let unity = document.getElementById("unity");
+    let unreal = document.getElementById("unreal");
+    let art_station = document.getElementById("art_station");
+
+    github.addEventListener("click", () => {
+        window.location.href = "https://github.com/ThatDudeGuy";
+    });
+    unity.addEventListener("click", () => {
+        window.location.href = "https://thatdudeguy.github.io/Branch_Html/unityProjects.html";
+    });
+    unreal.addEventListener("click", () => {
+        window.location.href = "";
+    });
+    art_station.addEventListener("click", () => {
+        window.location.href = "https://www.artstation.com/wilfredo_vazquez";
+    });
+}
+
 function SendEmail(){
     console.log(params);
     params = {
@@ -34,8 +56,6 @@ function SendEmail(){
         },
     );
 }
-
-
 
 function GetEmailForm(){
     let formPage = document.getElementById("formPage");
