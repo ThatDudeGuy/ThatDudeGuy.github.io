@@ -9,16 +9,17 @@ function SetListeners(){
     let art_station = document.getElementById("art_station");
 
     github.addEventListener("click", () => {
-        window.location.href = "https://github.com/ThatDudeGuy";
+        window.open("https://github.com/ThatDudeGuy");
     });
     unity.addEventListener("click", () => {
         window.location.href = "https://thatdudeguy.github.io/Branch_Html/unityProjects.html";
     });
     unreal.addEventListener("click", () => {
+        alert("No link active at this time");
         window.location.href = "";
     });
     art_station.addEventListener("click", () => {
-        window.location.href = "https://www.artstation.com/wilfredo_vazquez";
+        window.open("https://www.artstation.com/wilfredo_vazquez");
     });
 }
 
