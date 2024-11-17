@@ -21,6 +21,17 @@ function SetListeners(){
     art_station.addEventListener("click", () => {
         window.open("https://www.artstation.com/wilfredo_vazquez");
     });
+
+    function isMobileDevice() {
+        return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+    
+    if (isMobileDevice()) {
+        alert("User is on a mobile device.");
+    } else {
+        alert("User is not on a mobile device.");
+    }
+    
 }
 
 function SendEmail(){
