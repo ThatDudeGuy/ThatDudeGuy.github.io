@@ -111,3 +111,7 @@ body{
     padding-right: 10px;
     animation-fill-mode: forwards;
 }
+
+.row {
+    height: 50%;
+}

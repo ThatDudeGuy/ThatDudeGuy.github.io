@@ -17,9 +17,7 @@
 
     <body>
         <header>
-            <div id="Head">
-                <h1>Wilfredo Vazquez</h1>
-            </div>
+            <div id="Head"></div>
             <div id="navBar">
                 <div class="container" id="github">
                     <div class="icon"><img src="./Images/githubIcon.png" alt="" width="32" height="32"></div>
@@ -45,7 +43,6 @@
                     <div class="icon">
                         <button id="emailButton" onclick="GetEmailForm()"><img src="./Images/gmail_icon.png" alt="" width="32" height="32"></button>
                         <button class="navElement" onclick="GetEmailForm()">Email me!</button>
-                        <!-- <a href="" class="navElement">Email me!</a> -->
                     </div>
                 </div>
             </div>
@@ -53,38 +50,27 @@
         
         <iframe id="formPage" title="emailForm" src="./Branch_Html/emailForm.html" frameborder="0"></iframe>
 
-        <div id="me">
-            <img id="portrait" src="./Images/myPortrait01Smaller.jpg" alt="Me" width="508" height="675">
-        </div>
+        <div id="main">
+            <div id="left" class="section">
+                <div id="leftContent">
+                    <div id="titles">
+                        <h1>Wilfredo Vazquez</h1>
+                        <h3>Game Developer / Software Engineer</h3>
+                    </div>
+                    <div id="aboutMe">
+                        <p>Stuff about me</p>
+                    </div>
+                </div>
+            </div>
 
-        <div class="dropdown">
-            <span>About Me</span>
-            <div class="dropdown-content">
-              <p>Hello World!</p>
+            <div id="right" class="section">                
+                <div id="rightContent">
+                    <div id="picture">
+                        <img id="portrait" src="../Images/myPortrait01Smaller.jpg" alt="Me">
+                    </div>  
+                </div>
             </div>
         </div>
-
-        <br><br><br><br>
-
-        <footer>
-            <div id="army">
-                <img src="./Images/armyVet.png" alt="">
-            </div>
-            <!-- <div id="disclaimer">
-                <p>Proud Veteran. I do not represent the DOD</p>
-            </div> -->
-            <div id="signalCorp">
-                <img src="./Images/signalCorp.png" alt="">
-            </div>
-        </footer>
-        <!-- <div>
-            <button class="playButton"><img src="./Images/playButton.jpg" alt=""></button>
-        </div>
-        <div>
-            <button class="playButton"><img src="./Images/playButton.jpg" alt=""></button>
-        </div> -->
-
-        
 
     </body>
 </html>
