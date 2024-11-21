@@ -17,22 +17,26 @@
             </p>
         </header>
 
-        <div id="gameButtonContainer">
-            <button class="gameButton" onclick="window.location.href = '../index.html'">
-                Return To Home Page
-            </button>
-            <br><br><br>
-            <button id="closeGame" class="gameButton" onclick="CloseGame()">
-                Close Game
-            </button>
-            <br><br>
-            <button id="newGame" class="gameButton" onclick="NewGame()">
-                Select New Game
-            </button>
-        </div>
-
         <div id="mainScreen">
             <p>Select a game below and play it here!</p>
+        </div>
+
+        <div id="gameButtonContainer">
+            <div class="buttonDiv">
+                <button class="gameButton" onclick="window.location.href = '../index.html'">
+                    Return To Home Page
+                </button>
+            </div>
+            <div class="buttonDiv">
+                <button id="closeGame" class="gameButton" onclick="CloseGame()">
+                    Close Game
+                </button>
+            </div>
+            <div class="buttonDiv">
+                <button id="newGame" class="gameButton" onclick="NewGame()">
+                    Select New Game
+                </button>
+            </div>
         </div>
 
         <div id="indicator">
@@ -45,7 +49,12 @@
                     <div class="section">
                         <div id="first" class="game">
                             <img class="gameImage" src="../Images/GameImages/game1.png" alt="" width="400" height="250">
-                            <p>Information</p>
+                            <div class="info"><p>
+                                Controls:<br>"Spacebar" = Jump<br>"Left Click" = attack<br><br>
+                                Kill as many enemies as possible to rack up your score and get to the end before running out of lives to win!
+                                <br>
+                                I made this game in the span of a week for a game jam and it was actually the first Unity game that I ever built and completed!
+                            </p></div>
                             <!-- <p>hi</p> -->
                         </div>
                     </div>
@@ -53,14 +62,17 @@
                     <div class="section">
                         <div id="second" class="game">
                             <img class="gameImage" src="../Images/GameImages/game2.png" alt="" width="300" height="250">
-                            <p>Information</p>
+                            <div class="info"><p>
+                                This game was built over the course of one semester. I designed and created the main character and level art by myself.<br>
+                                I did NOT create the knight in the game nor most of the audio files. 
+                            </p></div>
                         </div>
                     </div>
     
                     <div class="section">
                         <div id="third" class="game">
                             <img class="gameImage" src="../Images/GameImages/game3.png" alt="" width="400" height="250">
-                            <p>Information</p>
+                            <div class="info"><p>Information about this cool, fun, and interactive video game</p></div>
                         </div>
                     </div>
                 </div>
@@ -69,23 +81,23 @@
                     <div class="section">
                         <div id="fourth" class="game">
                             <img class="gameImage" src="../Images/GameImages/game4.png" alt="" width="400" height="250">
-                            <p>Information</p>
+                            <div class="info"><p>Information about this cool, fun, and interactive video game</p></div>
                         </div>
                     </div>
     
-                    <div class="section">
+                    <!-- <div class="section">
                         <div id="fifth" class="game">
                             <img class="gameImage" src="../Images/GameImages/game5.png" alt="" width="400" height="250">
-                            <p>Information</p>
+                            <div class="info"><p>Empty Slot</p></div>
                         </div>
                     </div>
     
                     <div class="section">
                         <div id="sixth" class="game">
                             <img class="gameImage" src="../Images/GameImages/game6.png" alt="" width="400" height="250">
-                            <p>Information</p>
+                            <div class="info"><p>Empty Slot</p></div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
