@@ -100,15 +100,26 @@ html, body {
 }
 
 #picture {
-    max-width: 100%;
+    /* background-color: yellow; */
+    /* height: 80%; */
+    max-width: 50%;
     max-height: 100%;
+    overflow: hidden;
+    margin: auto;
 }
 #portrait {
-    padding-top: 25px;
-    max-width: 375px;
-    width: 100%;
+    /* padding-top: 10px; */
+    /* padding-bottom: 10px; */
+    max-width: 100%;
+    max-height: 100%;
+    /* padding-top: 25px; */
+    /* max-width: 90%; */
+    /* width: 100%; */
+    /* height: 100%; */
+    object-fit: contain;
     border-radius: 90px;
     margin: auto;
+    transform: scale(0.9);
 }
 
 #army, #signalCorp {
@@ -124,11 +135,12 @@ html, body {
 .section{
     width: 50%;
     height: 100%;
-    margin: none;
+    /* margin: none; */
 }
 
 #rightContent{
     height: 100%;
+    /* background-color: purple; */
 }
 #aboutMe {
     color: rgb(255, 255, 255);
@@ -143,16 +155,20 @@ html, body {
 #leftContent{
     background-color: black;
     width: 60%;
+    position: relative;
+    top: 15%;
     margin: auto;
     text-align: left;
 }
 #titles{
     color: white;
     font-size: x-large;
+    overflow: hidden;
 }
 #left{
     float: left;
 }
 #right{
+    /* background-color: yellow; */
     float: right;
 }

@@ -2,7 +2,23 @@ var params;
 
 document.addEventListener("DOMContentLoaded", () => SetListeners());
 
+window.addEventListener("resize", () => {
+    let picture = document.getElementById("portrait");
+
+    if(picture.offsetWidth >= 375){
+        let mainContainer = document.getElementById("main");
+        mainContainer.style.paddingBottom = "50px";
+    }
+})
+
 function SetListeners(){
+    let picture = document.getElementById("portrait");
+
+    if(picture.offsetWidth >= 375){
+        let mainContainer = document.getElementById("main");
+        mainContainer.style.paddingBottom = "50px";
+    }
+
     let github = document.getElementById("github");
     let unity = document.getElementById("unity");
     let unreal = document.getElementById("unreal");
@@ -12,7 +28,8 @@ function SetListeners(){
         window.open("https://github.com/ThatDudeGuy");
     });
     unity.addEventListener("click", () => {
-        window.location.href = "https://thatdudeguy.github.io/Branch_Html/unityProjects.html";
+        if (!isMobileDevice()) window.location.href = "https://thatdudeguy.github.io/Branch_Html/unityProjects.html";
+        else alert("Unity Projects page cannot be viewed on a mobile device.\nPlease visit this page on a PC or Mac.\n\nThank you.");
     });
     unreal.addEventListener("click", () => {
         alert("No link active at this time");
@@ -21,16 +38,6 @@ function SetListeners(){
     art_station.addEventListener("click", () => {
         window.open("https://www.artstation.com/wilfredo_vazquez");
     });
-
-    function isMobileDevice() {
-        return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    }
-    
-    if (isMobileDevice()) {
-        alert("User is on a mobile device.");
-    } else {
-        alert("User is not on a mobile device.");
-    }
     
 }
 
@@ -87,4 +94,8 @@ function GetEmailForm(){
 
 function CloseEmailForm(){
     window.parent.postMessage("closeIframe", "*");
+}
+
+function isMobileDevice() {
+    return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
