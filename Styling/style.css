@@ -99,10 +99,19 @@ html, body {
     border-radius: 20px;
 }
 
+@media screen and (orientation: portrait) {
+    #picture {
+        top: 10%;
+    }
+
+}
+
 #picture {
+    position: relative;
+    /* top: 10%; */
     /* background-color: yellow; */
     /* height: 80%; */
-    max-width: 50%;
+    max-width: 100%;
     max-height: 100%;
     overflow: hidden;
     margin: auto;
@@ -164,6 +173,7 @@ html, body {
     color: white;
     font-size: x-large;
     overflow: hidden;
+    max-height: 50%;
 }
 #left{
     float: left;
