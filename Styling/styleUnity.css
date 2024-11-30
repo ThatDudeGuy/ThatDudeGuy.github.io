@@ -1,64 +1,13 @@
-body{
-    text-align: center;
+html, body {
     margin: 0;
-    background-image: url(../Images/GameImages/unityBackground.png);
-}
-
-header {
-    background-color: red;
-    width: 50%;
-    margin: auto;
-}
-
-#indicator {
+    padding: 0;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    background-color: rgb(2, 2, 201);
-    position: absolute;
-    bottom: 0;
-    width: 100vw;
-    animation-fill-mode: forwards;
+    /* background-image: url(../Images/GameImages/unityBackground.png); */
+    background-image: url(../Images/GameImages/gameBackground.jpg);
+    background-size:cover;
 }
-
-/* #indicator:hover {
-    cursor: pointer;
-} */
-
-@keyframes shiftUp {
-    from {bottom: 0;}
-    to {bottom: 50%;}
-}
-
-@keyframes shiftDown {
-    from {bottom: 50%;}
-    to {bottom: 0;}
-}
-
-@keyframes expand {
-    from {transform: scaleY(0);}
-    to {transform: scaleY(1);}
-}
-
-@keyframes retract {
-    from {transform: scaleY(1);}
-    to {transform: scaleY(0);}
-}
-
-@keyframes spin {
-    from {rotate: 0;}
-    to {rotate: 180;}
-}
-
-#bannerButton {
-    background-color: blueviolet;
-    /* color: blueviolet; */
-}
-#bannerButton:hover {
-    cursor: pointer;
-}
-/* #indicator:active {
-    animation-name: shiftUp;
-    animation-duration: 1s;
-} */
 
 #mainScreen {
     text-align: center;
@@ -68,22 +17,19 @@ header {
     background-size: auto;
     width: 960px;
     height: 600px;
-
-    /* background-image: url(../Images/monitor.png); */
 }
 
 #mainContainer {
+    height: 100%;
+    width: 100%;
+    /* background-color: yellow; */
     background-image: url(../Images/GameImages/gameBackground.jpg);
-    /* display: none; */
-    transform: scaleY(0);
-    background-color: orange;
+    background-size: cover;
     text-align: center;
     position: absolute;
-    height: 1000px;
-    width: 100vw;
-    animation-fill-mode: forwards;
+    top: 0;
+    left: 0;
 }
-
 
 .section {
     /* background-color: green; */
@@ -96,15 +42,8 @@ header {
 
 .game {
     text-align: center;
-    /* background-color: blue; */
     margin: auto;
-    /* width: 50%; */
-}
-
-.info {
-    background-color: white;
-    width: 50%;
-    margin: auto;
+    height: 50%;
 }
 
 .gameImage {
@@ -113,15 +52,12 @@ header {
 
 #gameButtonContainer {
     padding-top: 25px;
-    /* position: relative; */
-    /* background-color: pink; */
-    /* left: 8%; */
+    text-align: center;
 }
 
 .buttonDiv {
     display: inline-block;
     padding-left: 25px;
-    padding-right: 25px;
 }
 .gameButton:hover {
     cursor: pointer;
@@ -130,12 +66,79 @@ header {
     border-radius: 8px;
 }
 
-.arrow {
-    padding-left: 10px;
-    padding-right: 10px;
-    animation-fill-mode: forwards;
-}
-
 .row {
     height: 50%;
+}
+
+#test{
+    /* background-color: aqua; */
+}
+
+.textHolder{
+    position: relative;
+    background-color: blue;
+    border-radius: 10px;
+    width: 33.33%;
+    margin: auto;
+    cursor: pointer;
+    animation-fill-mode: forwards;
+    text-wrap:nowrap;
+}
+
+.textHolder:hover .words {
+    animation: decorateText 0.5s forwards;
+}
+
+.textHolder:hover .symbol {
+    animation: rotate 0.5s forwards;
+}
+
+.symbol {
+    display: inline-block;
+    font-size: larger;
+}
+
+.words {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.info {
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background-color: black;
+    animation-fill-mode: forwards;
+    text-wrap: wrap;
+    overflow: auto;
+}
+
+@keyframes growWidth {
+    from {width: 33.33%;}
+    to {width: 75%;}
+}
+
+@keyframes shrinkWidth {
+    from {width: 75%;}
+    to {width: 33.33%;}
+}
+
+@keyframes growHeight {
+    from {height: 0px;}
+    to {height: 200px;}
+}
+
+@keyframes shrinkHeight {
+    from {height: 200px;}
+    to {height: 0px;}
+}
+
+@keyframes decorateText {
+    from {text-decoration: none;}
+    to {text-decoration: underline;}
+}
+
+@keyframes rotate {
+    from {rotate: 0deg;}
+    to {rotate: 180deg;}
 }

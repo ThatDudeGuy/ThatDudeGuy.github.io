@@ -12,13 +12,6 @@ window.addEventListener("resize", () => {
 })
 
 function SetListeners(){
-    let picture = document.getElementById("portrait");
-
-    if(picture.offsetWidth >= 375){
-        let mainContainer = document.getElementById("main");
-        mainContainer.style.paddingBottom = "50px";
-    }
-
     let github = document.getElementById("github");
     let unity = document.getElementById("unity");
     let unreal = document.getElementById("unreal");
@@ -32,7 +25,7 @@ function SetListeners(){
         else alert("Unity Projects page cannot be viewed on a mobile device.\nPlease visit this page on a PC or Mac.\n\nThank you.");
     });
     unreal.addEventListener("click", () => {
-        alert("No link active at this time");
+        alert("Check back later\nContent coming soon...");
         window.location.href = "";
     });
     art_station.addEventListener("click", () => {

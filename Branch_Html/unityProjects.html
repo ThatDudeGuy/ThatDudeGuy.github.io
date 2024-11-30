@@ -4,23 +4,19 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="../Styling/styleUnity.css">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init({
+                    publicKey: "j8EQVBdkKOKq-jEET",
+                });
+            })();
+        </script>
         <script src="../Logic/unity_logic.js"></script>
     </head>
 
     <body>
-        <header>
-            <h1>Timeline of my Unity progression</h1>
-            <p>
-                I first touched Unity in Spring of 2024. Since then, I have developed a few projects that have
-                forced me to dive into various sections of the Unity engine and the following projects will showcase
-                some of that.
-            </p>
-        </header>
-
-        <div id="mainScreen">
-            <p>Select a game below and play it here!</p>
-        </div>
-
         <div id="gameButtonContainer">
             <div class="buttonDiv">
                 <button class="gameButton" onclick="window.location.href = '../index.html'">
@@ -29,82 +25,122 @@
             </div>
             <div class="buttonDiv">
                 <button id="closeGame" class="gameButton" onclick="CloseGame()">
-                    Close Game
-                </button>
-            </div>
-            <div class="buttonDiv">
-                <button id="newGame" class="gameButton" onclick="NewGame()">
-                    Select New Game
+                    Close & Select New Game
                 </button>
             </div>
         </div>
 
-        <div id="indicator">
-            <img class="arrow" src="../Images/arrow.png" alt="">
-            <button id="bannerButton" type="button"><h1>Choose a game</h1></button>
-            <img class="arrow" src="../Images/arrow.png" alt="">
+        <br>
 
-            <div id="mainContainer">
-                <div class="row">
-                    <div class="section">
-                        <div id="first" class="game">
-                            <img class="gameImage" src="../Images/GameImages/game1.png" alt="" width="400" height="250">
-                            <div class="info"><p>
-                                Controls:<br>"Spacebar" = Jump<br>"Left Click" = attack<br><br>
-                                Kill as many enemies as possible to rack up your score and get to the end before running out of lives to win!
-                                <br>
-                                I made this game in the span of a week for a game jam and it was actually the first Unity game that I ever built and completed!
-                            </p></div>
-                            <!-- <p>hi</p> -->
-                        </div>
-                    </div>
-    
-                    <div class="section">
-                        <div id="second" class="game">
-                            <img class="gameImage" src="../Images/GameImages/game2.png" alt="" width="300" height="250">
-                            <div class="info"><p>
-                                This game was built over the course of one semester. I designed and created the main character and level art by myself.<br>
-                                I did NOT create the knight in the game nor most of the audio files. This was really my first "leap" into Unity which introduced me
-                                to what was possible. Check out my ArtStation back on the Home Page to see the design of this character!
-                            </p></div>
-                        </div>
-                    </div>
-    
-                    <div class="section">
-                        <div id="third" class="game">
-                            <img class="gameImage" src="../Images/GameImages/game3.png" alt="" width="400" height="250">
-                            <div class="info"><p>
-                                Duck Around & Find Out is my first collaborative project in which myself and one other dev lead the entire code design
-                                and game functionality. Check out the "Dev Team" section on the main menu. This project was built within a weeks time for another game jam!
-                            </p></div>
+        <div id="mainScreen">
+            <p>Select a game below and play it here!</p>
+        </div>
+
+        <div id="mainContainer">
+            <h1>Choose a game to play by clicking the image!</h1>
+            <div class="row">
+                <div class="section">
+                    <div class="game">
+                        <img id="first-game" class="gameImage" src="../Images/GameImages/game1.png" alt="" width="400" height="250">
+                        
+                        <div class="textHolder" id="gameText-1" data-clicked="false">
+                            <p class="symbol" id="symbol-1">
+                                ^
+                            </p>
+                            <p class="words" id="words-1">
+                                Additional Info
+                            </p>
+                            <div class="info">
+                                <p>
+                                    Controls:<br>"Spacebar" = Jump<br>"Left Click" = attack<br><br>
+                                    Kill as many enemies as possible to rack up your score and get to the end before running out of lives to win!
+                                    <br>
+                                    I made this game in the span of a week for a game jam and it was actually the first Unity game that I ever built and completed!
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="section">
-                        <div id="fourth" class="game">
-                            <img class="gameImage" src="../Images/GameImages/game4.png" alt="" width="400" height="250">
-                            <div class="info"><p>Information about this cool, fun, and interactive video game</p></div>
+                <div class="section">
+                    <div  class="game">
+                        <img id="second-game" class="gameImage" src="../Images/GameImages/game2.png" alt="" width="300" height="250">
+                        
+                        <div class="textHolder" id="gameText-2" data-clicked="false">
+                            <p class="symbol" id="symbol-2">
+                                ^
+                            </p>
+                            <p class="words" id="words-2">
+                                Additional Info
+                            </p>
+                            <div class="info">
+                                <p>
+                                    This game was built over the course of one semester. I designed and created the main character and level art by myself.<br>
+                                    I did NOT create the knight in the game nor most of the audio files. This was really my first "leap" into Unity which introduced me
+                                    to what was possible. Check out my ArtStation back on the Home Page to see the design of this character!
+                                </p>
+                            </div>
                         </div>
                     </div>
-    
-                    <!-- <div class="section">
-                        <div id="fifth" class="game">
-                            <img class="gameImage" src="../Images/GameImages/game5.png" alt="" width="400" height="250">
-                            <div class="info"><p>Empty Slot</p></div>
+                </div>
+
+                <div class="section">
+                    <div class="game">
+                        <img id="third-game" class="gameImage" src="../Images/GameImages/game3.png" alt="" width="400" height="250">
+                        
+                        <div class="textHolder" id="gameText-3" data-clicked="false">
+                            <p class="symbol" id="symbol-3">
+                                ^
+                            </p>
+                            <p class="words" id="words-3">
+                                Additional Info
+                            </p>
+                            <div class="info">
+                                <p>
+                                    Duck Around & Find Out is my first collaborative project in which myself and one other dev lead the entire code design
+                                    and game functionality. Check out the "Dev Team" section on the main menu. This project was built within a weeks time for another game jam!
+                                </p>
+                            </div>
                         </div>
                     </div>
-    
-                    <div class="section">
-                        <div id="sixth" class="game">
-                            <img class="gameImage" src="../Images/GameImages/game6.png" alt="" width="400" height="250">
-                            <div class="info"><p>Empty Slot</p></div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
 
+            <div class="row"><!--id="test"-->
+                <div class="section">
+                    <div  class="game">
+                        <img id="fourth-game" class="gameImage" src="../Images/GameImages/game4.png" alt="" width="400" height="250">
+                        
+                        <div class="textHolder" id="gameText-4" data-clicked="false">
+                            <p class="symbol" id="symbol-4">
+                                ^
+                            </p>
+                            <p class="words" id="words-4">
+                                Additional Info
+                            </p>
+                            <div class="info">
+                                <p>
+                                    Information about this cool, fun, and interactive video game
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="section">
+                    <div class="game">
+                        <img id="fifth-game" class="gameImage" src="../Images/GameImages/game5.png" alt="" width="400" height="250">
+                        <div class="info"><p>Empty Slot</p></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="game">
+                        <img id="sixth-game" class="gameImage" src="../Images/GameImages/game6.png" alt="" width="400" height="250">
+                        <div class="info"><p>Empty Slot</p></div>
+                    </div>
+                </div> -->
+            </div>
         </div>
 
     </body>
