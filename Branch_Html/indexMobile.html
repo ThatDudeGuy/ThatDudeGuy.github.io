@@ -7,7 +7,6 @@
         <script>
             window.addEventListener("message", function(event) {
                 if (event.data === "closeIframe") {
-                    // Hide the iframe
                     document.getElementById("formPage").style.display = "none";
                 }
             });
@@ -17,8 +16,8 @@
 
     <body>
         <header>
-            <div id="Head"></div>
             <div id="navBar">
+                <iframe id="formPage" title="emailForm" src="./emailForm.html" frameborder="0" height="100%"></iframe>
                 <div class="container" id="github">
                     <div class="icon"><img src="../Images/Links/githubIcon.png" alt="" width="32" height="32"></div>
                     <p class="navElement">GitHub</p>
@@ -47,33 +46,18 @@
                 </div>
             </div>
         </header>
-        
-        <iframe id="formPage" title="emailForm" src="./emailForm.html" frameborder="0" height="100%"></iframe>
-
-        <div id="main">
-            <div id="left" class="section">
-                <div id="leftContent">
-                    <div id="titles">
-                        <h1>Wilfredo Vazquez</h1>
-                        <h3>Game Developer / Software Engineer</h3>
-                    </div>
-                    <div id="aboutMe">
-                        <p>
-                            After my deployment in 2023 and some well gained knowledge, I returned to school and became the permanent TA for
-                            the Computer Science Department at Albright College.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="right" class="section">                
-                <div id="rightContent">
-                    <div id="picture">
-                        <!-- <img id="portrait" src="../Images/myPortrait01Smaller.jpg" alt="Me"> -->
-                    </div>  
-                </div>
-            </div>
+        <div id="picture"></div>
+        <br>
+        <div id="titles">
+            <h1>Wilfredo Vazquez</h1>
+            <h3>Game Developer / Software Engineer</h3>
         </div>
-
+        <div id="aboutMe">
+            <p>
+                After my deployment in 2023 and some well gained knowledge, I returned to school and became the permanent TA for
+                the Computer Science Department at Albright College.
+            </p>
+        </div>
+        
     </body>
 </html>

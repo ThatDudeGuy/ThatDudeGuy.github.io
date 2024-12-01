@@ -24,7 +24,9 @@ function SetListeners(){
         window.open("https://www.artstation.com/wilfredo_vazquez");
     });
     email.addEventListener("click", GetEmailForm);
-    
+
+    if(window.location.href.includes("Mobile")) return;
+    else if(isMobileDevice()) window.location.href = "https://thatdudeguy.github.io/Branch_Html/indexMobile.html"
 }
 
 function SendEmail(){
@@ -68,9 +70,6 @@ function GetEmailForm(){
     if(formPage.style.display == "none" || formPage.style.display == ""){
         formPage.style.display = "block";
         formPage.style.position = "absolute";
-        // formPage.style.left = "25%";
-        // formPage.style.width = "50%";
-        // formPage.style.height = "50vh";
         formPage.style.zIndex = "10";
     }
     else{
