@@ -2,20 +2,12 @@ var params;
 
 document.addEventListener("DOMContentLoaded", () => SetListeners());
 
-window.addEventListener("resize", () => {
-    let picture = document.getElementById("portrait");
-
-    if(picture.offsetWidth >= 375){
-        let mainContainer = document.getElementById("main");
-        mainContainer.style.paddingBottom = "50px";
-    }
-})
-
 function SetListeners(){
     let github = document.getElementById("github");
     let unity = document.getElementById("unity");
     let unreal = document.getElementById("unreal");
     let art_station = document.getElementById("art_station");
+    let email = document.getElementById("email");
 
     github.addEventListener("click", () => {
         window.open("https://github.com/ThatDudeGuy");
@@ -31,6 +23,7 @@ function SetListeners(){
     art_station.addEventListener("click", () => {
         window.open("https://www.artstation.com/wilfredo_vazquez");
     });
+    email.addEventListener("click", GetEmailForm);
     
 }
 
@@ -61,6 +54,7 @@ function SendEmail(){
             document.getElementById("subject").value = "";
             document.getElementById("email").value = "";
             alert('Success! Thank you for reaching out, I will be sure to get back to you soon.');
+            CloseEmailForm();
           },
           (error) => {
             console.log('FAILED...', error);
@@ -74,9 +68,9 @@ function GetEmailForm(){
     if(formPage.style.display == "none" || formPage.style.display == ""){
         formPage.style.display = "block";
         formPage.style.position = "absolute";
-        formPage.style.left = "25%";
-        formPage.style.width = "50%";
-        formPage.style.height = "50vh";
+        // formPage.style.left = "25%";
+        // formPage.style.width = "50%";
+        // formPage.style.height = "50vh";
         formPage.style.zIndex = "10";
     }
     else{

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="./Styling/style.css">
@@ -14,66 +13,67 @@
         </script>
         <script src="./Logic/logic.js"></script>
     </head>
-
     <body>
-        <header>
-            <div id="Head"></div>
-            <div id="navBar">
-                <div class="container" id="github">
-                    <div class="icon"><img src="./Images/githubIcon.png" alt="" width="32" height="32"></div>
-                    <p class="navElement">GitHub</p>
-                </div>
-
-                <div class="container" id="unity">
-                    <div class="icon"><img src="./Images/unityIcon.png" alt="" width="32" height="32"></div>
-                    <p class="navElement">Unity Projects</p>
-                </div>
-
-                <div class="container" id="unreal">
-                    <div class="icon"><img src="./Images/unreal_icon.png" alt="" width="32" height="32"></div>
-                    <p class="navElement">Unreal Engine</p>
-                </div>
-
-                <div class="container" id="art_station">
-                    <div class="icon"><img src="./Images/artStationIcon.png" alt="" width="32" height="32"></div>
-                    <p class="navElement">ArtStation</p>
-                </div>
-
-                <div class="container">
-                    <div class="icon">
-                        <button id="emailButton" onclick="GetEmailForm()"><img src="./Images/gmail_icon.png" alt="" width="32" height="32"></button>
-                        <button class="navElement" onclick="GetEmailForm()">Email me!</button>
-                    </div>
-                </div>
+        <div id="Links">
+            <div id="Title">
+                <p id="words">My Work</p>
             </div>
-        </header>
-        
-        <iframe id="formPage" title="emailForm" src="./Branch_Html/emailForm.html" frameborder="0" height="100%"></iframe>
+            <div id="block">
+                <p>.</p>
+            </div>
 
-        <div id="main">
-            <div id="left" class="section">
-                <div id="leftContent">
-                    <div id="titles">
-                        <h1>Wilfredo Vazquez</h1>
-                        <h3>Game Developer / Software Engineer</h3>
+            <div id="linksContainer">
+                <div id="linksGroup">
+                    <div class="link" id="github">
+                        <img src="./Images/Links/githubIcon.png" alt="" width="46.5%" height="50%">
+                        <p>GitHub</p>
                     </div>
-                    <div id="aboutMe">
-                        <p>
-                            After my deployment in 2023 and some well gained knowledge, I returned to school and became the permanent TA for
-                            the Computer Science Department at Albright College.
-                        </p>
+                    <div class="link" id="art_station">
+                        <img src="./Images/Links/artStationIcon.png" alt="" width="50%" height="50%">
+                        <p>ArtStation</p>
+                    </div>
+                    <div class="link" id="unity">
+                        <img src="./Images/Links/unityIcon.png" alt="" width="50%" height="50%">
+                        <p>Unity</p>
+                    </div>
+                    <div class="link" id="unreal">
+                        <img src="./Images/Links/unreal_icon.png" alt="" width="50%" height="50%">
+                        <p>Unreal</p>
+                    </div>
+                    <div class="link" id="email">
+                        <img src="./Images/Links/gmail_icon.png" alt="" width="50%" height="50%">
+                        <p>Email Me!</p>
                     </div>
                 </div>
             </div>
 
-            <div id="right" class="section">                
-                <div id="rightContent">
-                    <div id="picture">
-                        <!-- <img id="portrait" src="../Images/myPortrait01Smaller.jpg" alt="Me"> -->
-                    </div>  
-                </div>
+            <div id="foot">
+                <div id="army"></div>
+                <div id="signal"></div>
             </div>
         </div>
 
+        <div id="Personal">
+            <iframe id="formPage" title="emailForm" src="./Branch_Html/emailForm.html" frameborder="0" width="100%" height="100%"></iframe>
+            <div id="logo">
+                <img src="./Images/WV_logo.jpg" alt="" width="192" height="128">
+            </div>
+            <br><br><br>
+            <div id="aboutMe">
+                <h1>Wilfredo Vazquez</h1>
+                <h3>Game Developer / Software Engineer</h3>
+                <div id="info">
+                    <p>
+                        After my deployment in 2022-2023 and some well gained knowledge, I returned to school and became the permanent TA for
+                        the Computer Science Department at Albright College.
+                    </p>
+                </div>
+            </div>
+            <div id="picture">
+                <img src="./Images/myPortrait01Smaller.jpg" alt="" width="256" height="60%">
+            </div>
+        </div>
+
+        
     </body>
 </html>
