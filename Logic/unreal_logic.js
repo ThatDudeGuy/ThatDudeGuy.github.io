@@ -33,7 +33,10 @@ function SetListeners(){
     zoomImage = document.getElementById("zoomImage");
     feedback = document.getElementById("feedback");
 
-    feedback.addEventListener("click", () => {alert("No feedback functionality at this time")});
+    feedback.addEventListener("click", () => {
+        window.location.href = "https://thatdudeguy.github.io"
+        // alert("No feedback functionality at this time")
+    });
     zoomImage.addEventListener("click", () => {ToggleZoom("")});
     backButton.addEventListener("click", DepopulateImages);
     for (let i = 0; i < links.length; i++) {
