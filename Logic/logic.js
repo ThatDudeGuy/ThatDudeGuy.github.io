@@ -3,8 +3,6 @@ var params;
 document.addEventListener("DOMContentLoaded", () => SetListeners());
 
 function SetListeners(){
-    if(isMobileDevice() && !window.location.href.includes("Mobile")) window.location.href = "https://thatdudeguy.github.io/Branch_Html/indexMobile.html";
-
     let github = document.getElementById("github");
     let unity = document.getElementById("unity");
     let unreal = document.getElementById("unreal");
@@ -25,7 +23,8 @@ function SetListeners(){
         window.open("https://www.artstation.com/wilfredo_vazquez");
     });
     email.addEventListener("click", GetEmailForm);
-
+    
+    if(isMobileDevice() && !window.location.href.includes("Mobile")) window.location.href = "https://thatdudeguy.github.io/Branch_Html/indexMobile.html";
 }
 
 function SendEmail(){
