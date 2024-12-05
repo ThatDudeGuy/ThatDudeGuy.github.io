@@ -15,12 +15,11 @@ function SetListeners(){
         window.open("https://github.com/ThatDudeGuy");
     });
     unity.addEventListener("click", () => {
-        if (!isMobileDevice()) window.location.href = "https://thatdudeguy.github.io/Branch_Html/unityProjects.html";
+        if (!isMobileDevice()) window.location.href = "https://thatdudeguy.github.io/Branch_Html/unity.html";
         else alert("Unity Projects page cannot be viewed on a mobile device.\nPlease visit this page on a PC or Mac.\n\nThank you.");
     });
     unreal.addEventListener("click", () => {
-        alert("Check back later\nContent coming soon...");
-        window.location.href = "";
+        window.location.href = "https://thatdudeguy.github.io/Branch_Html/unreal.html";
     });
     art_station.addEventListener("click", () => {
         window.open("https://www.artstation.com/wilfredo_vazquez");
