@@ -7,6 +7,7 @@ function SetListeners(){
     let unity = document.getElementById("unity");
     let unreal = document.getElementById("unreal");
     let art_station = document.getElementById("art_station");
+    let linkedin = document.getElementById("linkedin");
     let email = document.getElementById("email");
 
     github.addEventListener("click", () => {
@@ -21,6 +22,9 @@ function SetListeners(){
     });
     art_station.addEventListener("click", () => {
         window.open("https://www.artstation.com/wilfredo_vazquez");
+    });
+    linkedin.addEventListener("click", () => {
+        window.open("https://www.linkedin.com/in/wilfredo-vazquez-501378301/");
     });
     email.addEventListener("click", GetEmailForm);
     
