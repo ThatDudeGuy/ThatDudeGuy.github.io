@@ -9,6 +9,7 @@ function SetListeners(){
     let art_station = document.getElementById("art_station");
     let linkedin = document.getElementById("linkedin");
     let email = document.getElementById("email");
+    let resume = document.getElementById("resume");
 
     github.addEventListener("click", () => {
         window.open("https://github.com/ThatDudeGuy");
@@ -27,6 +28,9 @@ function SetListeners(){
         window.open("https://www.linkedin.com/in/wilfredo-vazquez-501378301/");
     });
     email.addEventListener("click", GetEmailForm);
+    resume.addEventListener("click", () => {
+        window.open("../Images/Links/resume.pdf");
+    });
     
     if(isMobileDevice() && !window.location.href.includes("Mobile")) window.location.href = "https://thatdudeguy.github.io/Branch_Html/indexMobile.html";
 }

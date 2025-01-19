@@ -22,7 +22,8 @@
 .container {
     text-align: center;
     width: 100px;
-    margin-left: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
     border-radius: 8px;
     display: inline-block;
 }
@@ -121,4 +122,10 @@ h3 {
     font-size: large;
     margin-left: auto;
     margin-right: auto;
+}
+
+#resume {
+    color: rgb(0, 157, 255);
+    text-decoration-line: underline;
+    cursor: pointer;
 }

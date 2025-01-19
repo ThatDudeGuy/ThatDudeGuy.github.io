@@ -139,3 +139,7 @@ html, body {
     from {rotate: 0deg;}
     to {rotate: 180deg;}
 }
+
+a, a:visited {
+    color: rgb(0, 179, 255);
+}
