@@ -1,8 +1,21 @@
 var params;
+const PIC_WID = 380, PIC_HEI = 500;
+let scaleFactor = window.innerWidth / screen.width;
+
 
 document.addEventListener("DOMContentLoaded", () => SetListeners());
 
 function SetListeners(){
+    let picture = document.getElementById("picture");
+    // console.log(picture.clientTop);
+    ResizeElement(picture.firstElementChild);
+
+    let aboutMe = document.getElementById("aboutMe");
+    aboutMe.style.width = `${Math.round(screen.width * 0.25)}px`;
+    aboutMe.style.height = `${Math.round(screen.height * 0.6)}px`;
+
+    let logo = document.getElementById("logo");
+    
     let github = document.getElementById("github");
     let unity = document.getElementById("unity");
     let unreal = document.getElementById("unreal");
@@ -33,6 +46,17 @@ function SetListeners(){
     });
     
     if(isMobileDevice() && !window.location.href.includes("Mobile")) window.location.href = "https://thatdudeguy.github.io/Branch_Html/indexMobile.html";
+
+    window.addEventListener("resize", ()=>{
+        if(window.innerWidth < 512 || window.innerHeight < 600){
+            logo.firstElementChild.style.width = `${192 / 2}px`;
+            logo.firstElementChild.style.height = `${128 / 2}px`;
+        }
+        else{
+            logo.firstElementChild.style.width = `192px`;
+            logo.firstElementChild.style.height = `128px`;
+        }
+    });    
 }
 
 function SendEmail(){
@@ -61,7 +85,7 @@ function SendEmail(){
             document.getElementById("message").value = "";
             document.getElementById("subject").value = "";
             document.getElementById("email").value = "";
-            alert('Success! Thank you for reaching out, I will be sure to get back to you soon.');
+            alert('Success! Thank you for reaching out and I will be sure to get back to you soon.');
             CloseEmailForm();
           },
           (error) => {
@@ -91,3 +115,28 @@ function CloseEmailForm(){
 function isMobileDevice() {
     return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
+
+function ResizeElement(element)
+{
+    scaleFactor = window.innerWidth / screen.width;
+    // console.log(window.innerWidth);
+    // console.log(window.innerHeight * 2);
+
+    if(window.innerWidth > window.innerHeight * 2){
+        scaleFactor -= 0.07;
+    }
+    // console.log(scaleFactor);
+
+
+    element.style.width = `${Math.round(PIC_WID * scaleFactor)}px`;
+    element.style.height = `${Math.round(PIC_HEI * scaleFactor)}px`;
+
+    // console.log(element.style.width);
+    // console.log(element.style.height);
+}
+
+window.addEventListener("resize", () => {
+    let picture = document.getElementById("picture");
+
+    ResizeElement(picture.firstElementChild);
+})

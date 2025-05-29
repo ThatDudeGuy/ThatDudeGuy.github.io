@@ -58,6 +58,7 @@ html, body {
 }
 .gameButton:hover {
     cursor: pointer;
+    color: darkgray;
 }
 .gameButton {
     border-radius: 8px;
